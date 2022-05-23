@@ -1,0 +1,17 @@
+<tag style="*"> => CSS "in line" inserindo na própria tag o estilo.
+[elemento="*" i] => i significa que vai ignorar o sensitive case.
+[*]:pseudo-classe =>
+
+    ~ Exato
+    * Cotem
+    $ Termina com
+    ^ Começa com
+
+{font-size: *}
+    smaller
+    larger
+    150%
+    15px
+    1.5em (Recomendável)
+
+Obs.: 1em = 16px

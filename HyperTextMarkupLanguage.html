@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+
+        <title>My Site HTML</title>
+
+        <meta charset="utf-8">
+        <meta name="author" content="Rafael Pinho">
+        <meta name="keywords" content="HTML, CSS, Python, Django, Git, Web, Programacao">
+        <meta name="description" content="Site de Pinho aprendendo HTML">
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style type="text/css">
+            body{
+                color: navy;
+            }
+
+            #x{
+                color: chocolate;
+            }
+        </style>   
+        
+        <link rel="stylesheet" type="text/css" href="HyperTextMarkupLanguage.css">
+
+        <script type="text/javascript">
+            function incrementa(){
+                document.getElementById('nota').value += 10;
+            }
+
+            function decrementa(){
+                document.getElementById('nota').value -= 10;
+            }
+
+            function desenharReta(){
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.moveTo(0,0);
+                ctx.lineTo(200,100);
+                ctx.stroke();
+            }
+
+            function desenharCirculo(){
+                var cc = document.getElementById("myCanvas");
+                var cctx = cc.getContext("2d");
+                cctx.beginPath();
+                cctx.arc(95,50,40,0,2*Math.PI);
+                cctx.stroke();
+            }
+
+            function desenharTexto(){
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.strokeText("Hello World", 10,50);
+            }
+
+            function salvar(){
+                if(typeof(Storage) !== "undefined"){
+                    localStorage.setItem("nome", "Acesse: meupure.com");
+                }else{
+                    alert("Seu navegador não suporta o Web Storage");
+                }
+            }
+
+            function ler(){
+                if(typeof(Storage) !== "undefined"){
+                    document.getElementById("resultado").innerHTML = localStorage.getItem("nome");
+                } else {
+                    alert("Seu navegador não suporta o Web Storage");
+                }
+            }
+
+            function remover(){
+                if(typeof(Storage) !== "undefined"){
+                    localStorage.removeItem("nome")
+                } else {
+                    alert("Seu navegador não suporta o Web Storage");
+                }
+            }
+
+            function myMap() {
+                var mapCanvas = document.getElementById("map");
+                var mapOptions = {
+                    center: new google.maps.LatLng(-13.011766, -38.489868),
+                    zoom: 20,
+                    mapTypeId: google.maps.MapTypeId.HYBRID
+                }
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+            }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    
+    </head>
+
+    <body onload="myMap()">
+
+        <!-- Imagem e coordenadas geradas no site: http://www.image-map.net/ -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdH__E616MqaJYPUwQNVwUtXPMEkgT2RB5VW3KNmRDL738OqfH" alt="" usemap="#image-map">
+        <map name="image-map">
+            <area target="_blank" alt="Pure" title="Pure" href="https://meupure.com" shape="rect" coords="253,581,748,769">
+        </map>
+
+        <main class="buzz">
+            <h1>Maçãs</h1>
+            <p>A maçã é a fruta pomácea da macieira.</p>
+
+            <article>
+                <h2>Cor vermelha</h2>
+                <p>Estas maçãs vermelhas brilhantes são as mais comumente encontradas em muitos supermercados.</p>
+                <p>...</p>
+                <p>...</p>
+            </article>
+        </main>
+
+        <form>
+            <input type="text" name="Salario" required="required">
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p class="batata">
+            Texto
+        </p>
+
+        <h1 align="center">Título</h1>
+
+        <address>
+            Você pode contatar o autor em <a href="http://meupure.com/">www.meupure.com</a>.<br>
+            Se encontrar qualquer bug, por favor <a href="mailto:rrppinho@gmail.com">contate o administrador do site</a>.<br>
+            Obrigado por nos visitar<br>
+        </address>
+
+        <aside>
+            <p>Algum conteudo relacionado</p>
+        </aside>
+
+        <article class="fizz">
+            <h4>Efetivamente um artigo</h4>
+            <p>Lotes de texto aqui</p>
+            <address>Autor: rrpinho</address>
+            <aside><p>Algum conteudo relacionado a um &lt;article&gt;</p></aside>
+        </article>
+
+        <h1>Texto 1</h1>
+        <h2>Texto 2</h2>
+        <h3>Texto 3</h3>
+        <h4>Texto 4</h4>
+        <h5>Texto 5</h5>
+        <h6>Texto 6</h6>
+
+        <nav>
+            <ul>
+                <li><a href="#">Página inicial</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+
+        <dl class="lambda">
+            <dt><b>Rafael Pinho</b></dt>
+            <dd>Atua com o desenvolvimento de Hardware e Software embarcado.</dd>
+            
+            <dt>Gabriel Barreto</dt>
+            <dd>Exerce o desenvolvimento web completo, sendo o responsável pela identidade visual da empresa.</dd>
+
+            <dt><b>Gabriel Mascarenhas</b></dt>
+            <dd>Atua como designer de produto, é também responsável pelos protocolos de comunicação entre diferentes plataformas de desenvolvimento.</dd>
+
+            <dt>Italo Hiago</dt>
+            <dd>Responsável pela gestão de projetos e cronogramas de entrega.</dd>
+        
+            <p> Para mais informações <a href="https://meupure.com" target="_blanck">clique aqui</a></p>
+        </dl>
+
+        <br>
+        <br>
+
+        <article>
+            <p>Este é o primeiro parágrafo</p>
+            <hr>
+            <p>Este é o segundo parágrafo</p>
+        </article>
+
+        <div class="tibroncio">
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol>
+
+            <ul>
+                <li><data value="3967381398">PMED-ELY</data></li>
+                <li><data value="3967381399">AQUARIS</data></li>
+                <li><data value="3967381400">A.M.A.S</data></li>
+            </ul>
+        </div>
+
+        <pre>PEAO                                       DE                                      BATATA</pre>
+
+        <div id="x">Div aguardando por CSS para estilo</div>
+        
+        <p>Obama é presidente dos <abbr title="Estados Unidos da América">EUA</abbr></p>
+
+        <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="Uma imagem" title="Legenda da imagem">
+
+        <p>The &lt;mark&gt; element is used to <mark>highlight</mark> text</p>
+        
+        <p class="frutas">Nosso ramo de atuação é na area de <bdi>Internet of things</bdi></p>
+
+        <p><dfn id="def-A.M.A.S">A.M.A.S</dfn>: Amaciante, Maciante e Água Sanitaria</p>
+
+        <article class="muqueta">
+            <div>Div é um bloco</div>
+            <span>Span é uma linha</span>
+        </article>
+
+        <br>
+
+        <aside>
+            <span>O escritório da StartUp Pure abre as <time>07:00</time> e fecha as <time>22:00</time>.</span>
+            <span>O projeto se iniciou em <time datetime="2017-06-01 14:00">01 de Junho.</time></span>
+        </aside>
+
+        <footer class="fizzbuzz">
+            <p>Rodapé</p>
+            <audio src="http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1ddfasd).ogg" controls autoplay loop muted>
+                O seu navegador não suporta o elemento <code>audio</code>
+            </audio>
+            <video controls muted>
+                <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" type="video/ogg">
+                <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" type="video/quicktime">
+                O seu navegador não suporta o elemento <code>video</code>
+            </video>
+
+            <hr>
+
+            <embed> <iframe width="560" height="315" src="https://www.youtube.com/embed/GfPebkTAoqU?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        </footer>
+
+        <hr>
+        <hr>
+        <hr>
+
+        <h1 align="center">Tabelas</h1>
+
+        <table>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+            </tr>
+
+            <tr>
+                <td>Coisinho</td>
+                <td>Binha</td>
+            </tr>
+
+            <tr>
+                <td>Jovem</td>
+                <td>Tio</td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+
+        <table>
+            <colgroup>
+                <col span="1" style="background-color: slategrey">
+                <col span="2" style="background-color: lightsteelblue">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>Header content 1</th>
+                    <th>Header content 2</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>Body content 1</th>
+                    <th>Body content 2</th>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <th>Footer content 1</th>
+                    <th>Footer content 2</th>
+                </tr>
+            </tfoot>
+
+            <caption>Legenda da tabela.</caption>
+        </table>
+
+        <hr>
+        <hr>
+        <hr>
+        <br>
+
+        <form method="GET" action="#">
+            <fieldset>
+                <legend>Dados pessoais</legend>
+                <!-- Quando mais de um radio button tem o mesmo "name" você faz com que apenas 1 deles seja selecionado por vez-->
+                <input type="radio" id="primeiro" name="click">
+                <input type="radio" id="segundo" name="click">
+                <label for="primeiro">Clique aqui</label>
+                <br>
+                <input type="text" name="nome" placeholder="Digite seu nome">
+            </fieldset>
+
+            <br>
+
+            <input list="browsers"/>
+            <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Internet Explorer"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+            </datalist>
+
+            <select name="select">
+                <option value="valor1">Valor 1</option>
+                <option value="valor2" selected>Valor 2</option>
+                <option value="valor3">Valor 3</option>
+            </select>
+
+            <br>
+
+            <textarea name="textarea" rows="5" cols="25">Escreva alguma coisa aqui.</textarea>
+
+            0<input type="range" name="b" value="50">100 +
+            <input type="number" name="a" value="10"> = 
+            <output name="result"></output>
+            
+            <br>
+
+            <progress value="70" max="100" id="nota">70%</progress>
+            <button onclick="incrementa()">Incrementa</button>
+            <button onclick="decrementa()">Decrementa</button>
+
+            <br>
+
+            <input type="checkbox" name="MyCheck"><br>
+            <input type="checkbox" name="MyBox"><br>
+
+            <input type="color" name="color"><br>
+            <input type="date" name="date">Safari não funciona <br>
+            <input type="datetime-local" name="datetime-local">Safari e Firefox não funciona<br>
+            Select a file: <input type="file" name="myFile"><br>
+
+            <form>
+                User name:<br>
+                <input type="text" name="username"><br>
+                User Password:<br>
+                <input type="password" name="psw"><br>
+            </form>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <hr>
+        <hr>
+        <hr>
+        <br>
+
+        <details>
+            <summary>Alguns detalhes</summary>
+            <p>Mais informações sobre os detalhes.</p>
+        </details>
+
+        <svg width="350" height="210">
+            <circle cx="300" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"></circle>
+            <rect width="200" height="100" style="fill:rgb(0, 0, 255); stroke: width 10; stroke:rgb(0, 0, 0)"></rect>
+            <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill:lime; stroke:purple; stroke-width:5; fill-rule:evenodd;"></polygon>
+        </svg>
+
+        <br>
+
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000"></canvas>
+        <button onclick="desenharReta();">Desenhar Reta</button>
+        <button onclick="desenharCirculo();">Desenhar Circulo</button>
+        <button onclick="desenharTexto();">Desenhar Texto</button>
+
+        <!--        Não funciona no Chrome.
+        <menu type="context" id="popup-menu">
+            <menuitem type="checkbox" onclick="toogleOption()" checked="true">Checkbox</menuitem>
+            <menuitem type="command" onclick="doSomething()" label="Command" icon="icon.png">Checkbox</menuitem>
+            <menuitem type="radio" onclick="option()" checked="true" name="group1">Radio button 1</menuitem>
+            <menuitem type="radio" onclick="option()" name="group1">Radio button 2</menuitem>
+        </menu>
+        -->
+
+        <hr>
+        <hr>
+        <hr>
+        <br>
+
+        <div id="resultado"></div>
+        <button onclick="salvar()">Salvar na Web Storage</button>
+        <button onclick="ler()">Ler da Web Storage</button>
+        <button onclick="remover()">Remover da Web Storage</button>
+
+        <h1>Google Maps</h1>
+        <div id="map" style="width:790px;height:400px;"></div>
+
+    </body>
+</html>

@@ -1,0 +1,113 @@
+
+* { font-weight: bold; } /* Seletor Universal */
+h1 { color: forestgreen; } /* Seletor do tipo atributo */
+.meuTituloComClass { color: darkblue; } /* Seletor do tipo classe */
+#meuElementoComId { color: goldenrod; } /* Seletor do tipo ID */
+[disabled] { color: dimgrey; } /* Seleciona elementos desabilitados */
+[lang|=es] { color: firebrick; } /* Seleciona elementos setados para Espanhol! */
+[type='button'] { background-color: lawngreen; } /* Seleciona elementos do tipo button */
+[type='text'] { background-color: dodgerblue; } /* Seleciona elementos do tipo text */
+[class*=key] { color: khaki; } /* Seleciona elementos com a classe key, é o mesmo que .key */
+[title*="example" i] { color: maroon; } /* Seleciona elementos com titulo que contem a palavra example */
+a { color: seagreen; } /* Seleciona todos os links */
+a[href^="https://"] { color: midnightblue; } /* Seleciona todos os links do tipo HTTPS */
+img[src$=".png"] { transform: rotate(80deg); } /* Seleciona todas as imagens com extensão .png */
+[type="text"]:active { background-color: magenta; } /* Selecionando um estado via pseudo elemento */
+/*
+img[src$=".png"]:hover { transform: rotate(150deg) } 
+li:first-child, li:last-child { color: lightsalmon }
+p:last-of-type { font-size: 50px; }
+p.meuTituloComClass { font-size: 14px; }
+
+body { font-size: 100% "Comic Sans MS", cursive; }
+h1 { font-style: italic; font-size: 20px; }
+h2 { font-weight: bold; font-style: italic; font-size: 2.5em; }
+h3 { text-decoration: underline; text-align: right; font-size: 2.5em; font-weight: normal; }
+h4 { text-decoration: underline; text-align: center; }
+article { text-align: justify; text-indent: 50px; letter-spacing: 3px; line-height: 50px; word-spacing: 10px; }
+span { text-transform: uppercase; }
+a, li { text-decoration: none; }
+address { direction: rtl; }
+p { text-align: justify; text-indent: 50px; letter-spacing: 3px; line-height: 50px; word-spacing: 10px; }
+div { direction: rtl; }
+
+.div1 { width: 200px; height: 100px; background-color: silver; }
+.div2 { width: 200px; height: 100px; background-color: #00ff00; }
+.div3 { width: 200px; height: 100px; background-color: rgba(255, 100, 0, 0.78); }
+
+.content { background: url("fundo.png"); }
+
+ul { list-style: square; }
+ol { list-style: upper-roman; }
+body { counter-reset: mynum; }
+p.numbered:before { content: counter(mynum) ":"; counter-increment: mynum; font-weight: bold; }
+
+.div4 { width: 300px; height: 100px; border-left: dotted 10px dodgerblue; border-top: ridge 5px darkgoldenrod; padding: 10px 8px 6px 4px; margin: 20px 18px 16px 14px; float: left;}
+.div5 { width: 300px; height: 100px; border: groove 10px; border-color: chartreuse; padding: 10px; margin: 10px; float: right;}
+
+p { text-indent: 50px; }
+h3 { border-top: 1px solid gray; text-align: center; position: relative; top: 40px; }
+.div6 { float: left; }
+.div7 { clear: left; }
+.div8 { border: 3px darkblue solid; position: relative; }
+img { position: relative; left: 0px; bottom: -10px; }
+
+table { background-color: #ccc; border-spacing: 5px; } 
+table thead { background-color: cornflowerblue; }
+table td:first-child { border: 1px solid black; }
+table > caption { caption-side: top; font-style: italic; text-align: center; }
+
+#conteudo { width: 500px; height: 300px; margin: 0 auto; background-color: #ccc; }
+@media(max-width: 412px) { body{background-color: lightgreen;} h1{color: black;} }
+@media(min-width: 500px) { body{background-color: darkgreen;} h1{color: darkgoldenrod;} }
+@media(min-width: 1000px) { body{background-color: firebrick;} h1{color: floralwhite;} }
+@media print{ #conteudo{background-color: dodgerblue;} }
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) { body{background-color: darkviolet;} }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) { body{background-color: slategray; color: aliceblue;} }
+
+.tooltip { position: relative; display: inline-block; }
+.tooltiptext { visibility: hidden; width: 120px; background-color: darkgrey; color: azure; text-align: center; border-radius: 6px; padding: 5px 0; position: absolute; top: -5px; left: 105%; }
+.tooltip:hover .tooltiptext { visibility: visible; }
+img { opacity: 0.2; filter: alpha(opacity=50); }
+img:hover { opacity: 1; }
+div.img { margin: 5px; border: 1px solid #ccc; width: 180px; }
+div.img:hover { border: 1px solid #777; }
+div.img img { width: 100%; height: auto; }
+div.desc { padding: 15px; text-align: center; }
+
+body { margin: 0; }
+ul { list-style-type: none; margin: 0; padding: 0; width: 25%; background-color: #f1f1f1; position: static; height: 100%; overflow: auto; }
+li a { display: block; color: #000; padding: 8px 16px; text-decoration: none; }
+li a.active { background-color: #4CAF50; color: thistle; }
+li a:hover:not(.active) { background-color: #555; color: seashell; }
+
+.dropbtn { background-color: #4caf50; color: seashell; padding: 16px; font-size: 16px; border: none; cursor: pointer; }
+.dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+.dropdown-content a { color: darkslategrey; padding: 12px 16px; text-decoration: none; display: block; }
+.dropdown-content a:hover { background-color: #f1f1f1; }
+.dropdown:hover .dropdown-content { display: block; }
+
+div{ width: 300px; height: 100px; background-color: darkorange; border: 1px solid rgb(19, 0, 0); }
+div#myDiv { -ms-transform: rotate(20deg); -webkit-transform: rotate(20deg); transform: rotate(5deg); }
+#div9 { transform: scale(1.4, 2); transform: skewY(20deg); }
+div#myDiv1 { transform: rotateZ(50deg); }
+
+#borderimg { border: 10px solid transparent; padding: 15px; border-image: url(http://www.dynamicdrive.com/cssexamples/media/frame2.png) 30 stretch; }
+
+div { width: 100px; height: 100px; background-color: orangered; animation-name: example; animation-duration: 4s; }
+@keyframes example { from{background-color: tomato;} to{background-color: navy;} }
+#div10 { width: 100px; height: 100px; background-color: maroon; position: relative; animation-name: div10; animation-duration: 4s; animation-delay: 2s; animation-iteration-count: 3; animation-direction: alternate; }
+@keyframes div10 { 0%{background-color: red; left: 0px; top: 0px;} 25%{background-color: yellow; left: 200px; top: 0px;} 50%{background-color: blue; left: 200px; top: 200px;} 75%{background-color: green; left: 0px; top: 200px;} 100%{background-color: red; left: 0px; top: 0px;} }
+
+#example1 { width: 100%; height: 700px; background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/19/Boss-icon.png), url(https://st2.depositphotos.com/1000152/5664/i/950/depositphotos_56644535-stock-photo-vintag-background.jpg); background-position: right bottom, left top; background-repeat: no-repeat, repeat;}
+
+#example2 { border: 10px solid black; padding: 35px; background: url(https://upload.wikimedia.org/wikipedia/commons/4/43/EGA_palette.png); background-repeat: no-repeat; }
+#example3 { border: 10px solid black; padding: 35px; background: url(https://upload.wikimedia.org/wikipedia/commons/4/43/EGA_palette.png); background-repeat: no-repeat; background-origin: border-box; }
+#example4 { border: 10px solid black; padding: 35px; background: url(https://upload.wikimedia.org/wikipedia/commons/4/43/EGA_palette.png); background-repeat: no-repeat; background-origin: content-box; }
+*/
+
+p.test1 { white-space: nowrap; width: 200px; border: 1px solid #000000; overflow: hidden; text-overflow: clip; }
+p.test2 { white-space: nowrap; width: 200px; border: 1px solid #000000; overflow: hidden; text-overflow: ellipsis; }
+p.test { width: 11em; border: 1px solid #000000; word-wrap: break-word; }
+p.test3 { width: 140px; border: 1px solid #000000; word-break: keep-all; }
+p.test4 { width: 140px; border: 1px solid #000000; word-break: break-all; }

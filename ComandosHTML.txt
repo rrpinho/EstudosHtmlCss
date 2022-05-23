@@ -1,0 +1,135 @@
+<!DOCTYPE html> => Sempre no começo do código que permite o interpretador saber que haverá um documento em HTML5.
+<*> => Tags, comandos em HTML.
+<html> => Função principal de um código HTML.
+<* AtributoNome="AtributoValor"> => Parametros inseridos na Tag para modificar comportamentos padrões/opicionais de uma tag.
+<!-- Comentarios --> => Comentar o código.
+
+Requisições => Como trabalha - Pra que serve:
+    GET => Enviando as informações via URL. - Ler informações do servidor (Envia algo a solicitação e o servidor responde com a informação desejada).
+    POST => Envia as informações de forma escondida. - Cria novos recursos do servidor (Envio de informações para o servidor armazenar).
+    PUT => Enviar os Parametros via URL. - Atualizar as informações já registradas no servidor.
+    DELETE => Utiliza da URL para enviar os dados. - Excluir um dado do servidor.
+
+<head> => Cabeçalho do seu código. Passar informações para o navegador.
+    <base> => Definir a URL principal do seu documento.
+    <link> => Incluir recursos no documento.
+    <meta> => Passar metaInformações para o navegador. Para mecanismos de busca.
+    <style> => Utilizada para inserir código de outras linguagens. Comumente usado para insrerir CSS e/ou JavaScript.
+    <title> => Defini oque vai aparecer na aba do navegador.
+
+<body> => Corpo do código, a parte que será efetivamente visualizada pelo usuário.
+    
+    Separação de Conteúdo:
+        <address> => Usado para fornecer informações de contato.
+        <article> => Artigo. Uma composição independente da página.
+        <aside> => Uma seção da página que possui conteudo relacionado ao que contém na página. Ex.: Glossário, Referência, biografia, links relacionados.
+        <footer> => Rodapé do site.
+        <h1>...<h6> => Cabeçalhos/Titulos, define o tamanho da fonte. Em negrito.
+        <nav> => Link de navegação. Aponta para outra página ou então uma área da mesma página.
+
+    Conteúdo textual:
+        <main> => Espaço reservado onde será inserido o conteúdo principal do seu site. Oque quer se passar para o usuário sobre o do que se trata o site.
+        <div> => É um container genérico em bloco para se inserir algum tipo de conteúdo. Pode ser utilizado para agrupar elementos para fins de estilo.
+        <dl> => Lista de definição. Glossário
+            <dt> => Termos de definição.
+                <dd> => Explicação destes termos.
+        <hr> => Uma barra horizontal. Representa uma quebra temática entre elementos de nível.
+        <ol> => Ordered list = lista ordenada. Cria um espaço de lista para se inserir itens.
+            <li> => Inserir elementos de uma lista.
+        <ul> => Lista não ordenada. Cria um espaço de lista para se inserir itens.
+            <li> => Inserir elementos de uma lista.
+        <pre> => Texto pré-formatado. Utilizado para estruturar um trecho do site com a formatação já definida (Usar varios Espaços no texto).
+
+    Semânticas textuais:
+        <a href="*"> => Insere um link em uma região do texto.
+        <abbr title="SignificadoDaAbreviação"> => Representa uma abreviação e opicionalmente fornece uma descrição completa para ela.
+        <b> => Enfatizar algo no texto. Por padrão deixa em negrito.
+        <bdi> => Utilizado para inserir uma palavra em outro idioma.
+        <br> => Quebra de linha.
+        <wbr> => Quebra de linha utilizada pelo navegador, caso necessário.
+        <data value="*"> => Inserir informações que são importantes, mas para as máquinas crawlers. 
+        <dfn> => Representa uma instância de definição de um termo.
+        <mark> => Representa um trecho de destaque em um texto.
+        <span> => É um container genérico em linha para se inserir algum tipo de conteúdo. Pode ser utilizado para agrupar elementos para fins de estilo.
+        <time> => Parâmetros de hora.
+        <date> => Parâmetros de data.
+        <strong> => Deixar um trecho do texto em negrito.
+        <var> => Utilizado para se inserir uma variavel (Em casos de equeções, programação).
+
+    Imagem e multimídia:
+        <map> => Define um mapa na imagem. Reserva um pedaço da imagem para se inserir um link.
+            <area> => Elemento que define efetivamente a região da imagem que será utilizada e insere o hipertexto(link).
+        <audio> => Elemento de som.
+        <video> => Elemento de reprodução de vídeo.
+            <source> => Semelhante ao atributo "src". Para se inserir a URL do arquivo que será reproduzido.
+
+        Atributos para "<audio>" e "<video>":
+                autoplay => Inicializa automaticamente ao carregar a página.
+                controls => Habilita controles da reprodução (Pause, Mute, Maximizar,download).
+                loop => Inicia novamente ao termino da reprodução.
+                muted => Inicia a reprodução sem som.
+
+    Conteúdo Integrado e Scripting:
+        <embed> => Permite incluir conteúdo de outro site dentro do seu. (plug-in). (Reproduzir um vídeo do Youtube).
+        <source> => Recursos adicionais para um elemento. (Ex.: Reproduzir um vídeo em diferentes extensões para garantir que o usuário irá assistir).
+        <canvas> => Utilizado para se inserir Scripts que podem gerar Gráficos, desenhos, animações...
+        <noscript> => Utilizada quando o navegador do usuário não consegue carregar seu script ou então está com a função desabilitada.
+
+    Conteúdo tabulado:
+        <caption> => 
+        <table> => Cria uma tabela. Dados em duas dimensões.
+            <tr> => Insere uma linha na tabela.
+            <th> => Delimita uma coluna na tabela (Definição).
+            <td> => Insere uma nova coluna na tabela.
+            <colgroup> => Agrupa colunas da tabela para ser inserido o estilo.
+                <col> => Insere seus estilos na tabela.
+            <thead> => Cabeçalho da tabela.
+            <tbody> => Corpo da tabela.
+            <tfoot> => Finalização da tabela. (Resultado)
+            <caption> => Legenda da tabela.
+
+    Formulários:
+        <form> => Seção de um documento que contém controles interativos que permitem ao usuário submeter informação para o servidor.
+            <button> => Representa um botão clicável.
+            <datalist> => Conjunto de elementos "option".
+                <option> => Dados que serão inseridos na lista.
+            <fieldset> => Agrupa elementos dentro de um formulário web.
+                <legend> => Insere uma legenda no seu campo.
+            <select> => Um campo de seleção.
+            <textarea> => Campo de texto bem grande.
+            <output> => Elemento de saída, representa o resultado de um cálculo.
+            <progress> => Elemento que mostra o progresso.
+        method="*" => Método que será utilizado pelo formulário para enviar as informações para o servidor.
+            GET
+            POST
+            PUT
+            DELETE
+        <input> => Insere algum tipo de item desejado.
+            type="*" => Tipo do input.
+                radio => Item de seleção.
+                text => Campo de texto.
+                range => Barra de progresso modificável com o mouse.
+                number => Campo de texto do tipo numérico.
+                checkbox => Caixa de seleção.
+                color => Campo onde será selecionado uma cor.
+                date => Campo de seleção da data.
+                datetime-local => Campo de seleção de data/hora.
+                file => Botão de Upload de um arquivo.
+                password => Campo de senha.
+                email => Campo de e-mail. Já vem com a validação (@).
+                reset => Reinicia todos os campos do formulário.
+            required => Obrigratório a inserção de alguma informação.
+
+    Elementos interativos:
+        <details> => É usado como uma ferramenta de onde o usuário irá obter informações adicionais (Artigo, Imagem, Tabela, Referência bibliográfica).
+            <summary> => É utilizado como um sumário ou legenda para o conteúdo de um elemento. (Com uma tak).
+        <dialog> => Caixa de pop-up(modal).
+        <menu> => Cria um campo onde será inserido efetivamente um menu.
+            <menuitem> => Itens que estão presentes no menu.
+
+    Gráficos e desenhos:
+        <svg> => Utilizado para inserir um vetor gráfico na web.
+            <circle> => Inserir uma circunferência.
+            <rect> => Inserir um retângulo.
+            <polygon> => Insere um polígono.
+        <canvas> => Elemento utilizado para desenhar gráficos utilizando JavaScript.
